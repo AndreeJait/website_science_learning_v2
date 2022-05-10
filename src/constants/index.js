@@ -47,6 +47,18 @@ import SEPARATING_DISSOLVING from "../assets/images/separating/2A.mp4";
 import SEPARATING_FILTRATION from "../assets/images/separating/2B.mp4";
 import SEPARATING_EVAPORATION from "../assets/images/separating/2C.mp4";
 
+import frame2 from "../assets/images/voltage/Q1(input3).mp4";
+import frame3 from "../assets/images/voltage/Q2(input6).mp4";
+import frame4 from "../assets/images/voltage/frame4.png";
+import frame5 from "../assets/images/voltage/frame5.png";
+import frame6 from "../assets/images/voltage/frame6.png";
+
+import START_VOLTAGE from "../assets/images/voltage/index.png";
+import END_VOLTAGE from "../assets/images/voltage/summary.png";
+const TYPE_QUESTION_ONE = "TYPE_ONE";
+const TYPE_QUESTION_TWO = "TYPE_TWO";
+const TYPE_QUESTION_THREE = "TYPE_THREE";
+
 const Constant = {
   BASE_URL: "https://localhost:7071",
   LOGO: LOGO,
@@ -239,6 +251,123 @@ const Constant = {
     text: "evaporation",
     video: SEPARATING_EVAPORATION,
   },
+
+  QUESTIONS: [
+    {
+      id: 1,
+      name: "Circuit 1",
+      question:
+        "CLICK on to points on the circuit to measure the voltage acrros the two points with a voltmeter. Fill the blanks with the voltage measurements obtained for the stated parts of circuit.",
+      type: TYPE_QUESTION_ONE,
+      addition: [frame2],
+      additionType: ["video"],
+      choice: [
+        {
+          text: "Voltage across <b>lamp A<b> =",
+          unit: "V",
+        },
+        {
+          text: "Voltage across <b>lamp B </b> =",
+          unit: "V",
+        },
+        {
+          text: "Voltage across <b>power source</b> =",
+          unit: "V",
+        },
+      ],
+      additionWide: [],
+      key: ["3", "3", "3"],
+    },
+    {
+      id: 2,
+      name: "Circuit 1",
+      question:
+        "Select the correct symbol for each blank to show the relationship between the voltage across power source, voltage across lamp A, and voltage across lamp B. You may use each other option more than once.",
+      type: TYPE_QUESTION_TWO,
+      addition: [frame3],
+      additionType: ["video"],
+      known: [
+        "Voltage across <b>lamp A</b> = 30 V",
+        "Voltage across <b>lamp B</b> = 30 V ",
+        "Voltage across <b>power source</b> = 30 V",
+      ],
+      hint: [
+        "voltage across power source",
+        "voltage across lamp A",
+        "voltage across lamp B",
+      ],
+      additionWide: [],
+      key: ["=", "="],
+      choice: ["+", "-", ":", "×", "="],
+    },
+    {
+      id: 3,
+      name: "Circuit 2",
+      question:
+        "CLICK on to points on the circuit to measure the voltage across the two points with a voltmeter. Fill the blanks with the voltage measurements obtained for the stated parts of circuit.",
+      type: TYPE_QUESTION_ONE,
+      addition: [frame4],
+      additionType: ["image"],
+      choice: [
+        {
+          text: "Voltage across <b>lamp<b> =",
+          unit: "V",
+        },
+        {
+          text: "Voltage across <b>variable resistor</b> =",
+          unit: "V",
+        },
+        {
+          text: "Voltage across <b>power source</b> =",
+          unit: "V",
+        },
+      ],
+      additionWide: [],
+      key: ["6", "6", "6"],
+    },
+    {
+      id: 4,
+      name: "Circuit 2",
+      question:
+        "SELECT the correct symbol for each blank to show the relationship between the voltage across power source, voltage across lamp, and voltage across variable resistor. You may use each other option more than once.",
+      type: TYPE_QUESTION_TWO,
+      addition: [frame5],
+      additionType: ["image"],
+      known: [
+        "Voltage across <b>lamp</b> = 6.0 V",
+        "Voltage across <b>variable resistor</b> = 6.0 V ",
+        "Voltage across <b>power source</b> = 6.0 V",
+      ],
+      hint: [
+        "voltage across power source",
+        "voltage across lamp",
+        "voltage across variable resistor",
+      ],
+      additionWide: [],
+      key: ["=", "="],
+      choice: ["+", "-", ":", "×", "="],
+    },
+    {
+      id: 5,
+      name: "Comparison",
+      question:
+        "COMPARE the voltage readings. Select the correct answer that describes the voltage across separate branches of a parallel circuit.",
+      type: TYPE_QUESTION_THREE,
+      addition: [frame6],
+      additionType: ["image"],
+      additionWide: [0],
+      hint: ["The voltage accross seperate branches of a parallel circuit is"],
+      choice: ["the same", "different"],
+      key: "the same",
+    },
+  ],
+  START_VOLTAGE: START_VOLTAGE,
+  END_VOLTAGE: END_VOLTAGE,
 };
 Object.freeze(Constant);
-export default Constant;
+export {
+  Constant as default,
+  TYPE_QUESTION_ONE,
+  TYPE_QUESTION_TWO,
+  TYPE_QUESTION_THREE,
+};

@@ -43,7 +43,7 @@ function StageTwo({ selectedSoap, changeStage, ...props }) {
                   }}
                     role={"button"}
                     className={buildClass({
-                        "col-md-2 mt-md-0 mt-3 mb-md-0 mb-3 col-5 rounded shadow-sm col-lg-1 p-2 flow-choice": true,
+                        "col-md-2 mt-md-0 mt-3 mb-md-0 mb-3 col-5 rounded shadow-sm col-lg-1 px-2 py-3 flow-choice": true,
                         "bg-secondary" : selectedFlow === null ? false : selectedFlow.description === selectedSoap.flow[item].description,
                         "bg-info" : !(selectedFlow === null ? false : selectedFlow.description === selectedSoap.flow[item].description)
                     })}
@@ -69,7 +69,7 @@ function StageTwo({ selectedSoap, changeStage, ...props }) {
                   role={"button"}
                   key={index}
                   className={buildClass({
-                    "col-md-2 mt-md-0 mt-3 mb-md-0 mb-3 col-5 rounded shadow-sm col-lg-1 p-2 flow-choice": true,
+                    "col-md-2 mt-md-0 mt-3 mb-md-0 mb-3 col-5 rounded shadow-sm col-lg-1 px-2 py-3 flow-choice": true,
                     "bg-secondary" : selectedFlow === null ? false : selectedFlow.description === selectedSoap.flow[item].description,
                     "bg-info" : !(selectedFlow === null ? false : selectedFlow.description === selectedSoap.flow[item].description)
                 })}

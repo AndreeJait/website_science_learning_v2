@@ -36,7 +36,7 @@ function Public(props) {
           <Route path="/soap" element={<Soap/>}/>
           <Route path="/voltage" element={<Voltage/>}/>
       </Routes>
-      <div className="footer col-12 bg-secondary py-2">
+      <div className="footer col-12 bg-secondary py-2 mt-4">
           <h6 className="text-white text-center">Create By IT DEl &copy; 20022</h6>
       </div>
     </div>

@@ -1,3 +1,7 @@
+import constants, {
+  TYPE_QUESTION_ONE,
+  TYPE_QUESTION_TWO,
+} from "../../constants";
 import { checkTypeVariabel, setEmpy } from "../../helpers";
 import GET_LANGUAGES from "../../lang";
 import TYPE_REDUCER from "./type";
@@ -9,8 +13,17 @@ const initialState = {
   selectedSoap: {
     method: "",
     duration: 0,
-    flow: null
+    flow: null,
   },
+  answer: [
+    ...constants.QUESTIONS.map((item) => {
+      console.log("Here");
+      if (item.type === TYPE_QUESTION_ONE || item.type === TYPE_QUESTION_TWO) {
+        return [...(Array(item.key.length).map(()=> "Andree"))];
+      }return "";
+    }),
+  ],
+  answare: {},
   isTransparent: false,
 };
 
