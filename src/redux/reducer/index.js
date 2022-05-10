@@ -6,6 +6,12 @@ const initialState = {
   lang: GET_LANGUAGES.EN,
   isLogin: false,
   user: {},
+  selectedSoap: {
+    method: "",
+    duration: 0,
+    flow: null
+  },
+  isTransparent: false,
 };
 
 const reducer = (state = initialState, actions) => {

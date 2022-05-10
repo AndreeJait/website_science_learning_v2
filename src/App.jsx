@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./containers/pages/Home";
+import Public from "./containers/pages/Public";
 import "./plugins";
+import "./assets/styles/global.css";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +12,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Public />} />
         </Routes>
       </BrowserRouter>
     );
