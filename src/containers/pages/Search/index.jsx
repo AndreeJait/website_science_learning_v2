@@ -42,7 +42,7 @@ const SearchPage = (props) => {
         {result.map((item, index) => (
           <div
             key={index}
-            className="col-12 p-2 bg-white rounded mb-2 d-flex search-card gap-3 align-items-center"
+            className="col-12 p-2 bg-white rounded mb-2 d-flex search-card gap-3 align-items-center flex-md-row flex-column"
           >
             <div className="image-banner">
               <img src={item.thumbnail} alt="" />
