@@ -61,6 +61,10 @@ function Navbar({ navbar, isTransparent, ...props }) {
                   className={buildClass({
                     "navbar-link navbar-top-link": true,
                     active: location.pathname === item.link,
+                    "text-white":
+                      location.pathname === "/" &&
+                      !bgWhite &&
+                      location.pathname === item.link,
                   })}
                 >
                   {item.name}
