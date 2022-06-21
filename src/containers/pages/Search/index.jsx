@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Constant from "../../../constants";
 const courses = [
   {
@@ -34,6 +34,7 @@ const SearchPage = (props) => {
         value.name.toLowerCase().includes(key.toLowerCase())
     ),
   ];
+  const navigate = useNavigate();
   return (
     <div className="search-temp p-2">
       <h1 className="fs-1 text-white">Result for "{key}"</h1>
@@ -41,6 +42,10 @@ const SearchPage = (props) => {
       <div className="mt-3">
         {result.map((item, index) => (
           <div
+            role={"button"}
+            onClick={() => {
+              navigate(item.link);
+            }}
             key={index}
             className="col-12 p-2 bg-white rounded mb-2 d-flex search-card gap-3 align-items-center flex-md-row flex-column"
           >

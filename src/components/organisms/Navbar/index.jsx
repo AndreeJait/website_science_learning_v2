@@ -34,7 +34,22 @@ function Navbar({ navbar, isTransparent, ...props }) {
           </div>
         </Link>
         <NavbarB.Toggle aria-controls="basic-navbar-nav" />
+
         <NavbarB.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto mt-md-0 mt-3 d-flex gap-3">
+            {navbar.map((item, index) => (
+              <Link
+                key={index}
+                to={item.link}
+                className={buildClass({
+                  "navbar-link navbar-top-link": true,
+                  active: location.pathname === item.link,
+                })}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </Nav>
           <div className="d-flex ms-auto align-items-center">
             <form
               action=""
@@ -63,20 +78,6 @@ function Navbar({ navbar, isTransparent, ...props }) {
               </div>
             </form>
           </div>
-          <Nav className="ms-auto mt-md-0 mt-3 d-flex gap-3">
-            {navbar.map((item, index) => (
-              <Link
-                key={index}
-                to={item.link}
-                className={buildClass({
-                  "navbar-link navbar-top-link": true,
-                  active: location.pathname === item.link,
-                })}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </Nav>
         </NavbarB.Collapse>
       </Container>
     </NavbarB>
