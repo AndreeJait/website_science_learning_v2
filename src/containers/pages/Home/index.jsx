@@ -55,21 +55,24 @@ function Home(props) {
           </h5>
         </div>
         <div className="course col-12 mt-5">
-          {courses.map((item, index)=>(
-            <div className={buildClass({
-              "d-flex course-container mb-5 justify-content-center flex-column gap-3 align-items-center": true,
-              "flex-md-row-reverse": index % 2 !== 0,
-              "flex-md-row": index % 2 === 0
-            })} key={index}>
+          {courses.map((item, index) => (
+            <div
+              className={buildClass({
+                "d-flex course-container mb-5 justify-content-center flex-column gap-3 align-items-center": true,
+                "flex-md-row-reverse": index % 2 !== 0,
+                "flex-md-row": index % 2 === 0,
+              })}
+              key={index}
+            >
               <div className="course-image rounded-circle">
                 <img src={item.thumbnail} alt="" />
               </div>
               <div className="course-description col-md-5 col-12 px-3 py-2">
-                <h2 className="fs-2 text-white text-bold">
-                  {item.name}
-                </h2>
+                <h2 className="fs-2 text-white text-bold">{item.name}</h2>
                 <p className="text-white">{item.description}</p>
-                <Link className="btn btn-success text-white" to={item.link}>Start Study</Link>
+                <Link className="btn btn-success text-white" to={item.link}>
+                  Start Study
+                </Link>
               </div>
             </div>
           ))}

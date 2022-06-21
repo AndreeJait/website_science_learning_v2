@@ -82,7 +82,7 @@ function Separating(props) {
       let media = document.getElementById("videoMedia");
       media.src = selectedSeparating[currentPlay].video;
     }
-  }, [isPlay, selectedSeparating, choiceItem]);
+  }, [isPlay, selectedSeparating, choiceItem, currentPlay]);
 
   return (
     <div className="separating">
@@ -202,10 +202,10 @@ function Separating(props) {
 
           {currentPlay > 0 && currentPlay <= 2 && isPlay && (
             <button
-              onClick={()=>{
-                let media = document.getElementById("videoMedia")
-                media.src = selectedSeparating[currentPlay - 1].video
-                  setCurrentPlay(currentPlay - 1)
+              onClick={() => {
+                let media = document.getElementById("videoMedia");
+                media.src = selectedSeparating[currentPlay - 1].video;
+                setCurrentPlay(currentPlay - 1);
               }}
               className="btn btn-secondary px-5"
             >
@@ -213,12 +213,12 @@ function Separating(props) {
             </button>
           )}
 
-          {currentPlay < 2 &&  currentPlay >= 0 && isPlay && (
+          {currentPlay < 2 && currentPlay >= 0 && isPlay && (
             <button
-            onClick={()=>{
-                let media = document.getElementById("videoMedia")
-                media.src = selectedSeparating[currentPlay + 1].video
-                  setCurrentPlay(currentPlay + 1)
+              onClick={() => {
+                let media = document.getElementById("videoMedia");
+                media.src = selectedSeparating[currentPlay + 1].video;
+                setCurrentPlay(currentPlay + 1);
               }}
               className="btn btn-secondary px-5 ms-auto"
             >
