@@ -50,6 +50,7 @@ import SEPARATING_EVAPORATION from "../assets/images/separating/2C.mp4";
 import frame2 from "../assets/images/voltage/Q1(input3).mp4";
 import frame3 from "../assets/images/voltage/Q2(input6).mp4";
 import frame4 from "../assets/images/voltage/frame4.png";
+import frame1 from "../assets/images/voltage/frame3.png";
 import frame5 from "../assets/images/voltage/frame5.png";
 import frame6 from "../assets/images/voltage/frame6.png";
 
@@ -259,8 +260,8 @@ const Constant = {
       question:
         "CLICK on to points on the circuit to measure the voltage acrros the two points with a voltmeter. Fill the blanks with the voltage measurements obtained for the stated parts of circuit.",
       type: TYPE_QUESTION_ONE,
-      addition: [frame2],
-      additionType: ["video"],
+      addition: [frame1],
+      additionType: ["image"],
       choice: [
         {
           text: "Voltage across <b>lamp A<b> =",
@@ -284,8 +285,8 @@ const Constant = {
       question:
         "Select the correct symbol for each blank to show the relationship between the voltage across power source, voltage across lamp A, and voltage across lamp B. You may use each other option more than once.",
       type: TYPE_QUESTION_TWO,
-      addition: [frame3],
-      additionType: ["video"],
+      addition: [frame1],
+      additionType: ["image"],
       known: [
         "Voltage across <b>lamp A</b> = 30 V",
         "Voltage across <b>lamp B</b> = 30 V ",
@@ -306,8 +307,8 @@ const Constant = {
       question:
         "CLICK on to points on the circuit to measure the voltage across the two points with a voltmeter. Fill the blanks with the voltage measurements obtained for the stated parts of circuit.",
       type: TYPE_QUESTION_ONE,
-      addition: [frame4],
-      additionType: ["image"],
+      addition: [frame2],
+      additionType: ["video"],
       choice: [
         {
           text: "Voltage across <b>lamp<b> =",
@@ -331,8 +332,8 @@ const Constant = {
       question:
         "SELECT the correct symbol for each blank to show the relationship between the voltage across power source, voltage across lamp, and voltage across variable resistor. You may use each other option more than once.",
       type: TYPE_QUESTION_TWO,
-      addition: [frame5],
-      additionType: ["image"],
+      addition: [frame3],
+      additionType: ["video"],
       known: [
         "Voltage across <b>lamp</b> = 6.0 V",
         "Voltage across <b>variable resistor</b> = 6.0 V ",
