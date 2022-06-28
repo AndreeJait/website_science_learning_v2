@@ -365,10 +365,34 @@ const Constant = {
   START_VOLTAGE: START_VOLTAGE,
   END_VOLTAGE: END_VOLTAGE,
 };
+const COURSE = [
+  {
+    name: "Voltage in a Paralel Circuit",
+    thumbnail: Constant.VOLTAGE_IMAGE,
+    link: "/voltage",
+    description:
+      "Manipulate interactive to make measurements and deduce the relationship between voltage across separate branches of a parallel circuit.",
+  },
+  {
+    name: "Staying Healthy - Effect of Soap",
+    thumbnail: Constant.SOAP_IMAGE,
+    link: "/soap",
+    description:
+      "Investigate the effects of anti-microbial agents (e.g. antiseptics, disinfectants) on the population growth of micro-organisms (e.g. bacteria, fungi)",
+  },
+  {
+    name: "Separating Mixture Salt and Rice Grains",
+    thumbnail: Constant.SEPARATING_IMAGE,
+    link: "/separating",
+    description:
+      "Manipulative interactive allows students to observe how separation techniques in different sequences affect the separation of salt and rice grains.",
+  },]
 Object.freeze(Constant);
 export {
   Constant as default,
   TYPE_QUESTION_ONE,
+  COURSE,
   TYPE_QUESTION_TWO,
   TYPE_QUESTION_THREE,
 };
+

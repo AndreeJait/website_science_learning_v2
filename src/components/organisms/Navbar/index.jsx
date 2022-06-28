@@ -78,7 +78,7 @@ function Navbar({ navbar, isTransparent, ...props }) {
               ))}
             </Nav>
             <div className="d-flex ms-auto align-items-center">
-             { location.pathname === "/" && <form
+             { (location.pathname === "/" || location.pathname.includes("/search/")) && <form
                 action=""
                 onSubmit={(event) => {
                   event.preventDefault();

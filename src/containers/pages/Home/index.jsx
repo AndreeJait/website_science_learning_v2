@@ -1,33 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Constant from "../../../constants";
+import Constant, { COURSE } from "../../../constants";
 import { buildClass } from "../../../helpers/classHelper";
 import { reduxDispatch, reduxState } from "../../../helpers/reduxHelper";
 
-const courses = [
-  {
-    name: "Voltage in a Paralel Circuit",
-    thumbnail: Constant.VOLTAGE_IMAGE,
-    link: "/voltage",
-    description:
-      "Manipulate interactive to make measurements and deduce the relationship between voltage across separate branches of a parallel circuit.",
-  },
-  {
-    name: "Staying Healthy - Effect of Soap",
-    thumbnail: Constant.SOAP_IMAGE,
-    link: "/soap",
-    description:
-      "Investigate the effects of anti-microbial agents (e.g. antiseptics, disinfectants) on the population growth of micro-organisms (e.g. bacteria, fungi)",
-  },
-  {
-    name: "Separating Mixture Salt and Rice Grains",
-    thumbnail: Constant.SEPARATING_IMAGE,
-    link: "/separating",
-    description:
-      "Manipulative interactive allows students to observe how separation techniques in different sequences affect the separation of salt and rice grains.",
-  },
-];
+const courses = [...COURSE];
 
 function Home(props) {
   return (

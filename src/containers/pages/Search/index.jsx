@@ -1,29 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Constant from "../../../constants";
-const courses = [
-  {
-    name: "Course Voltage",
-    thumbnail: Constant.VOLTAGE_IMAGE,
-    link: "/voltage",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae deserunt pariatur sapiente temporibus libero delectus praesentium optio deleniti, dolores velit facilis id illo omnis, ex explicabo eius fugit? Tempore!",
-  },
-  {
-    name: "Course SOAP",
-    thumbnail: Constant.SOAP_IMAGE,
-    link: "/soap",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae deserunt pariatur sapiente temporibus libero delectus praesentium optio deleniti, dolores velit facilis id illo omnis, ex explicabo eius fugit? Tempore!",
-  },
-  {
-    name: "Course Separating",
-    thumbnail: Constant.SEPARATING_IMAGE,
-    link: "/separating",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae deserunt pariatur sapiente temporibus libero delectus praesentium optio deleniti, dolores velit facilis id illo omnis, ex explicabo eius fugit? Tempore!",
-  },
-];
+import Constant, { COURSE } from "../../../constants";
+const courses = [...COURSE];
 
 const SearchPage = (props) => {
   const { key } = useParams();
@@ -51,9 +29,14 @@ const SearchPage = (props) => {
             <div className="description">
               <h3>{item.name}</h3>
               <p>{item.description}</p>
-              <button className="btn btn-success"             onClick={() => {
-              navigate(item.link);
-            }}>Start Study</button>
+              <button
+                className="btn btn-success"
+                onClick={() => {
+                  navigate(item.link);
+                }}
+              >
+                Start Study
+              </button>
             </div>
           </div>
         ))}
