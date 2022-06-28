@@ -7,25 +7,25 @@ import { reduxDispatch, reduxState } from "../../../helpers/reduxHelper";
 
 const courses = [
   {
-    name: "Course Voltage",
+    name: "Voltage in a Paralel Circuit",
     thumbnail: Constant.VOLTAGE_IMAGE,
     link: "/voltage",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae deserunt pariatur sapiente temporibus libero delectus praesentium optio deleniti, dolores velit facilis id illo omnis, ex explicabo eius fugit? Tempore!",
+      "Manipulate interactive to make measurements and deduce the relationship between voltage across separate branches of a parallel circuit.",
   },
   {
-    name: "Course SOAP",
+    name: "Staying Healthy - Effect of Soap",
     thumbnail: Constant.SOAP_IMAGE,
     link: "/soap",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae deserunt pariatur sapiente temporibus libero delectus praesentium optio deleniti, dolores velit facilis id illo omnis, ex explicabo eius fugit? Tempore!",
+      "Investigate the effects of anti-microbial agents (e.g. antiseptics, disinfectants) on the population growth of micro-organisms (e.g. bacteria, fungi)",
   },
   {
-    name: "Course Separating",
+    name: "Separating Mixture Salt and Rice Grains",
     thumbnail: Constant.SEPARATING_IMAGE,
     link: "/separating",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae deserunt pariatur sapiente temporibus libero delectus praesentium optio deleniti, dolores velit facilis id illo omnis, ex explicabo eius fugit? Tempore!",
+      "Manipulative interactive allows students to observe how separation techniques in different sequences affect the separation of salt and rice grains.",
   },
 ];
 
