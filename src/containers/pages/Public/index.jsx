@@ -13,18 +13,18 @@ const navbar = [
     name: "Home",
     link: "/",
   },
-  {
-    name: "Separating",
-    link: "/separating",
-  },
-  {
-    name: "Soap",
-    link: "/soap",
-  },
-  {
-    name: "Voltage",
-    link: "/voltage",
-  },
+  // {
+  //   name: "Separating",
+  //   link: "/separating",
+  // },
+  // {
+  //   name: "Soap",
+  //   link: "/soap",
+  // },
+  // {
+  //   name: "Voltage",
+  //   link: "/voltage",
+  // },
 ];
 
 function Public(props) {

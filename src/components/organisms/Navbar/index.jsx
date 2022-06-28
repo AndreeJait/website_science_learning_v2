@@ -46,14 +46,20 @@ function Navbar({ navbar, isTransparent, ...props }) {
       >
         <Container fluid>
           <Link to={"/"} className="navbar-brand">
+            <div className="d-flex gap-2 align-items-center">
             <div className="navbar-icon rounded-circle">
               <img src={Constant.LOGO} alt="" />
+            </div>
+            <h3 className={buildClass({
+              "fs-3 fw-bold ": true,
+              "text-white": location.pathname === "/" && !bgWhite
+            })}>E-LEARNING</h3>
             </div>
           </Link>
           <NavbarB.Toggle aria-controls="basic-navbar-nav" />
 
           <NavbarB.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto mt-md-0 mt-3 d-flex gap-3">
+            <Nav className=" mt-md-0 mt-3 d-flex gap-3">
               {navbar.map((item, index) => (
                 <Link
                   key={index}
@@ -72,7 +78,7 @@ function Navbar({ navbar, isTransparent, ...props }) {
               ))}
             </Nav>
             <div className="d-flex ms-auto align-items-center">
-              <form
+             { location.pathname === "/" && <form
                 action=""
                 onSubmit={(event) => {
                   event.preventDefault();
@@ -83,6 +89,7 @@ function Navbar({ navbar, isTransparent, ...props }) {
                 <div className="d-flex align-items-center">
                   <div className="form-group">
                     <input
+                    placeholder="Search course here.."
                       className="form-control"
                       onChange={(event) => {
                         setKey(event.currentTarget.value);
@@ -97,7 +104,7 @@ function Navbar({ navbar, isTransparent, ...props }) {
                     <FontAwesomeIcon icon={"search"} />
                   </button>
                 </div>
-              </form>
+              </form>}
             </div>
           </NavbarB.Collapse>
         </Container>

@@ -42,10 +42,6 @@ const SearchPage = (props) => {
       <div className="mt-3">
         {result.map((item, index) => (
           <div
-            role={"button"}
-            onClick={() => {
-              navigate(item.link);
-            }}
             key={index}
             className="col-12 p-2 bg-white rounded mb-2 d-flex search-card gap-3 align-items-center flex-md-row flex-column"
           >
@@ -55,6 +51,9 @@ const SearchPage = (props) => {
             <div className="description">
               <h3>{item.name}</h3>
               <p>{item.description}</p>
+              <button className="btn btn-success"             onClick={() => {
+              navigate(item.link);
+            }}>Start Study</button>
             </div>
           </div>
         ))}
