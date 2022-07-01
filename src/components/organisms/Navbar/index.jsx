@@ -47,19 +47,15 @@ function Navbar({ navbar, isTransparent, ...props }) {
         <Container fluid>
           <Link to={"/"} className="navbar-brand">
             <div className="d-flex gap-2 align-items-center">
-            <div className="navbar-icon rounded-circle">
-              <img src={Constant.LOGO} alt="" />
-            </div>
-            <h3 className={buildClass({
-              "fs-3 fw-bold ": true,
-              "text-white": location.pathname === "/" && !bgWhite
-            })}>E-LEARNING</h3>
+              <div className="navbar-icon rounded-circle">
+                <img src={Constant.LOGO} alt="" />
+              </div>
             </div>
           </Link>
           <NavbarB.Toggle aria-controls="basic-navbar-nav" />
 
           <NavbarB.Collapse id="basic-navbar-nav">
-            <Nav className=" mt-md-0 mt-3 d-flex gap-3">
+            <Nav className=" mt-md-0 ms-auto mt-3 d-flex gap-3">
               {navbar.map((item, index) => (
                 <Link
                   key={index}
@@ -77,34 +73,37 @@ function Navbar({ navbar, isTransparent, ...props }) {
                 </Link>
               ))}
             </Nav>
-            <div className="d-flex ms-auto align-items-center">
-             { (location.pathname === "/" || location.pathname.includes("/search/")) && <form
-                action=""
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  console.log(key);
-                  navigate(`/search/${key}`);
-                }}
-              >
-                <div className="d-flex align-items-center">
-                  <div className="form-group">
-                    <input
-                    placeholder="Search course here.."
-                      className="form-control"
-                      onChange={(event) => {
-                        setKey(event.currentTarget.value);
-                      }}
-                      type="text"
-                      name=""
-                      value={key}
-                      id=""
-                    />
+            <div className="d-flex ms-3 align-items-center">
+              {(location.pathname === "/" ||
+                location.pathname.includes("/search/")) && (
+                <form
+                  action=""
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    console.log(key);
+                    navigate(`/search/${key}`);
+                  }}
+                >
+                  <div className="d-flex align-items-center">
+                    <div className="form-group">
+                      <input
+                        placeholder="Search course here.."
+                        className="form-control"
+                        onChange={(event) => {
+                          setKey(event.currentTarget.value);
+                        }}
+                        type="text"
+                        name=""
+                        value={key}
+                        id=""
+                      />
+                    </div>
+                    <button className="btn btn-success" type="submit">
+                      <FontAwesomeIcon icon={"search"} />
+                    </button>
                   </div>
-                  <button className="btn btn-success" type="submit">
-                    <FontAwesomeIcon icon={"search"} />
-                  </button>
-                </div>
-              </form>}
+                </form>
+              )}
             </div>
           </NavbarB.Collapse>
         </Container>

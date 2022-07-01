@@ -1,15 +1,13 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Constant, { COURSE } from "../../../constants";
+import { COURSE } from "../../../constants";
 const courses = [...COURSE];
 
 const SearchPage = (props) => {
   const { key } = useParams();
   const result = [
-    ...courses.filter(
-      (value) =>
-        value.description.toLowerCase().includes(key.toLowerCase()) ||
-        value.name.toLowerCase().includes(key.toLowerCase())
+    ...courses.filter((value) =>
+      value.name.toLowerCase().includes(key.toLowerCase())
     ),
   ];
   const navigate = useNavigate();
